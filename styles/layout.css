@@ -35,7 +35,7 @@ aside {
     & .aside-container {
         max-width: 31rem;
 
-        & > img{
+        & > div{
             margin-top: 2rem;
         }
     }
@@ -49,3 +49,51 @@ aside {
         }
     }
 }
+
+@media (width < 1024px) {
+ #app {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+ }
+
+ main {
+    display: table;
+    padding: 1.5rem;
+ }
+
+ aside {
+    order: -1;
+    padding: 1.5rem;
+
+    header {
+
+        & > div{
+            text-align: center;
+            margin-top: 1.5rem;
+            margin-bottom: .75rem;
+        }
+
+        h2{
+            display: none;
+        }
+
+        p {
+            display: none;
+        }
+    }
+ }
+}
+
+@media (min-width:571px) and (max-width:1023px) {
+
+     main {
+        margin-inline: auto; 
+     }
+
+     .aside-container {
+        margin-inline: auto;
+     }
+
+}
+
